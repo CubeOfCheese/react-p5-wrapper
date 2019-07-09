@@ -38,7 +38,7 @@ import P5Wrapper from 'react-p5-wrapper';
 <P5Wrapper sketch={sketch} />
 ```
 
-An Sketch could look like this:
+A Sketch could look like this:
 
 ```
 export default function sketch (p) {
@@ -55,7 +55,7 @@ export default function sketch (p) {
   };
 
   p.draw = function () {
-    p.background(100);
+    p.background(100);		// Used to clear the frame buffer. Otherwise a ghost image will persist indefinitely.
     p.normalMaterial();
     p.noStroke();
     p.push();
